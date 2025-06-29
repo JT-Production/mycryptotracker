@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Chart } from "./Chart"
 
 const Hero = () => {
@@ -8,7 +9,7 @@ const Hero = () => {
                 <Chart/>
             </div>
             <div className="">
-              <img src="/logo 2.png" alt="" className="h-80 rounded-lg"/>
+              <Image width={1000} height={1000} src="/logo 2.png" alt="" className="h-80 rounded-lg"/>
             </div>
         </div>
     </div>

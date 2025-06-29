@@ -1,7 +1,7 @@
 import { TableCell, TableRow } from "@/components/ui/table";
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { Crypto } from "./Table";
-import {  Modal } from "./Modal";
+
 
 interface TableRowProps {
   crypto: Crypto;

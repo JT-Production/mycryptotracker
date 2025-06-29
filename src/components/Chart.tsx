@@ -6,9 +6,6 @@ import { Area, AreaChart, CartesianGrid, XAxis } from "recharts"
 import {
   Card,
   CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
 } from "@/components/ui/card"
 import {
   ChartConfig,
@@ -128,7 +125,7 @@ const chartConfig = {
 } satisfies ChartConfig
 
 export function Chart() {
-  const [timeRange, setTimeRange] = React.useState("90d")
+  const [timeRange] = React.useState("90d")
 
   const filteredData = chartData.filter((item) => {
     const date = new Date(item.date)

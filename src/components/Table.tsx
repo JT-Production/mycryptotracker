@@ -36,7 +36,7 @@ interface TableDemoProps {
   searchValue: string;
   setSearchValue: (value: string) => void;
 }
-export function TableDemo({searchValue, setSearchValue}: TableDemoProps) {
+export function TableDemo({searchValue}: TableDemoProps) {
   const [data, setData] = useState<Crypto[]>([]);
   const [loading, setLoading] = useState(true);
   const [page, setPage] = useState(0);
@@ -57,7 +57,7 @@ export function TableDemo({searchValue, setSearchValue}: TableDemoProps) {
   }, []);
 
   let indexOne = page * 10;
-  let indexTwo = (page + 1) * 10;
+  const indexTwo = (page + 1) * 10;
   if (indexOne < 0) indexOne = 0;
   else if (indexOne === 0 && indexTwo >= 20) indexOne = 10;
 // console.log("index 1:" + indexOne, indexTwo);

@@ -25,7 +25,8 @@ export async function GET() {
     }
 
     return NextResponse.json(data);
-  } catch (error) {
+   } catch (error) {
+    console.error(error); // Log the error for debugging
     return NextResponse.json({ error: 'Something went wrong' }, { status: 500 });
   }
 }

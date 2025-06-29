@@ -1,5 +1,6 @@
 "use client"
 import { useTheme } from "next-themes"
+import Image from "next/image"
 import { useState } from "react"
 import { CiSearch } from "react-icons/ci"
 import { GoSun } from "react-icons/go"
@@ -12,16 +13,16 @@ interface NavbarProps {
 
 const Navbar = ({searchValue, setSearchValue} : NavbarProps) => {
     const [mode, setMode] = useState("dark");
-    const { theme, setTheme } = useTheme()
+    const { setTheme } = useTheme()
 
   return (
     <div className="flex justify-center items-center p-3 shadow-md lg:px-20">
         <div className="flex items-center">
             {
                 mode === "dark" ? (
-                    <img src="/white-logo T.png" alt="logo" className="w-50 h- rounded-full"/>
+                    <Image width={1000} height={1000} src="/white-logo T.png" alt="logo" className="w-50 h- rounded-full"/>
                 ) : (
-                    <img src="/black-logo T.png " alt="logo" className="w-50 h- rounded-full"/>
+                    <Image width={1000} height={1000} src="/black-logo T.png " alt="logo" className="w-50 h- rounded-full"/>
                 )
             }
             
