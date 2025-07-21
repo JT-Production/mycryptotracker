@@ -51,11 +51,12 @@ export function TableDemo({searchValue}: TableDemoProps) {
         });
     };
     fetchData(); // initial load
+  
     const interval = setInterval(fetchData, 5000); // refresh every 10 seconds
 
     return () => clearInterval(interval); // cleanup on unmount
   }, []);
-
+  console.log(data)
   let indexOne = page * 10;
   const indexTwo = (page + 1) * 10;
   if (indexOne < 0) indexOne = 0;
@@ -81,9 +82,9 @@ console.log("cutData: ", cutData);
           <TableRow className="font-bold ">
             <TableHead className="w-[200px]">Name</TableHead>
             <TableHead className="translate-x-8">Price</TableHead>
-            <TableHead className="translate-x-6">1h %</TableHead>
-            <TableHead className="translate-x-6">24h %</TableHead>
-            <TableHead className="translate-x-6">7d %</TableHead>
+            <TableHead className="translate-x-6">1h%</TableHead>
+            <TableHead className="translate-x-6">24h%</TableHead>
+            <TableHead className="translate-x-6">7d%</TableHead>
             <TableHead className="translate-x-">Market Cap</TableHead>
             <TableHead className="translate-x-">Volume(24h)</TableHead>
             <TableHead className="translate-x-">Circulating Supply</TableHead>
